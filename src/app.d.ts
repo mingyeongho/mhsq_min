@@ -12,4 +12,13 @@ declare global {
 declare module 'svelte-routing';
 
 
-export {};
+
+declare global {
+	interface Window {
+		Kakao: any;
+		kakao: any;
+	}
+}
+
+
+export { };

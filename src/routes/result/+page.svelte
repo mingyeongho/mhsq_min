@@ -1,16 +1,14 @@
-<script>
+<script lang="ts">
   import { goto } from "$app/navigation";
   import { page } from "$app/stores";
   import Header from "../../component/Survey/Header.svelte";
   import BottomDiscription from "../../component/bottom_discription/bottom_discription.svelte";
   import { answer } from "../store/answer_data";
+  import type { AnswerType } from "../survey/type";
   import { calculate } from "./schema_calculate";
   import { createComment } from "./schema_comment";
-  // @ts-ignore
-  /**
-   * @type {import('../survey/type').AnswerType[]}
-   */
-  let selectedAnswers = $answer;
+
+  let selectedAnswers: AnswerType[] = $answer;
   const aa = [
     5, 5, 5, 5, 6, 3, 4, 5, 5, 5, 5, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
     5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,
@@ -21,6 +19,14 @@
   // const bb = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
   // const bbb = symptomsCalculate(bb, 'male');
   // const comment2 = cutoff(bbb);
+
+  const copyKakaoTalk = () => {
+    const { Kakao } = window;
+
+    Kakao.Share.sendScrap({
+      requestUrl: $page.url.href,
+    });
+  };
 
   const copyClipboard = async () => {
     await window.navigator.clipboard.writeText($page.url.href);
@@ -38,7 +44,7 @@
   </div>
   <main>
     <div class="links">
-      <button>
+      <button on:click={copyKakaoTalk}>
         <img src="share_kakao.svg" alt="share_kakao" />
       </button>
       <button on:click={copyClipboard}>
