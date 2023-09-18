@@ -7,7 +7,7 @@
 
 <style scoped>
   .testDiscription {
-    font-family: "Noto-Sans-Light";
+    font-family: "Noto-Sans";
     font-size: 0.875rem;
     font-weight: 400;
     line-height: 22px;

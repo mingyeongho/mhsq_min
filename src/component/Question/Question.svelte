@@ -86,7 +86,7 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
     color: #4a4141;
     text-align: center;
-    font-family: "Noto-Sans-Light";
+    font-family: "Noto-Sans";
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;

@@ -51,8 +51,8 @@
 
   .foundation {
     color: #3d3030;
-    font-family: "THEFACESHOP INKLIPQUID";
-    font-size: 1.125rem;
+    font-family: "Noto-Sans";
+    font-size: 0.875rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;

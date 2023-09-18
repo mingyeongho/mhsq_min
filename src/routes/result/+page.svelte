@@ -1,6 +1,7 @@
 <script lang="ts">
   import { goto } from "$app/navigation";
   import { page } from "$app/stores";
+  import SuccessCopyModal from "../../component/Modal/SuccessCopyModal.svelte";
   import Header from "../../component/Survey/Header.svelte";
   import BottomDiscription from "../../component/bottom_discription/bottom_discription.svelte";
   import { answer } from "../store/answer_data";
@@ -20,6 +21,8 @@
   // const bbb = symptomsCalculate(bb, 'male');
   // const comment2 = cutoff(bbb);
 
+  let isShowSuccessCopyModal = false;
+
   const copyKakaoTalk = () => {
     const { Kakao } = window;
 
@@ -30,6 +33,7 @@
 
   const copyClipboard = async () => {
     await window.navigator.clipboard.writeText($page.url.href);
+    isShowSuccessCopyModal = true;
   };
 
   const onRetry = () => {
@@ -90,6 +94,9 @@
   </main>
 </section>
 <div class="bottom" />
+{#if isShowSuccessCopyModal}
+  <SuccessCopyModal bind:showModal={isShowSuccessCopyModal} />
+{/if}
 
 <style scoped>
   section {
@@ -188,7 +195,7 @@
 
   .summary > span {
     color: #4a4141;
-    font-family: "Noto-Sans-Light";
+    font-family: "Noto-Sans";
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 400;
@@ -204,7 +211,7 @@
 
   .other > span {
     color: #4a4141;
-    font-family: "Noto-Sans-Light";
+    font-family: "Noto-Sans";
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 400;
@@ -224,7 +231,7 @@
     background-color: white;
     color: #4a4141;
     text-align: center;
-    font-family: "Noto-Sans-Light";
+    font-family: "Noto-Sans";
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
