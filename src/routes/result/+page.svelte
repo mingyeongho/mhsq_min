@@ -69,7 +69,10 @@
           >
         </div>
         <div class="other">
-          <span class="total">내가 제일 중요해(손상된 한계)</span>
+          <div class="total_wrapper">
+            <span class="total_word">- 손상된 한계 -</span>
+            <span class="total_summary">내가 제일 중요해!</span>
+          </div>
           <span class="disposition"
             >내가 남들보다 더 우선 시 되어야 하고, 나의 욕구를 그때그때 표출하는
             것이 중요한 성향이에요. 남들과 협력해야 하는 상황에 자신의 개인적인
@@ -77,12 +80,22 @@
             하거나 불편함을 감수해야 하는 상황에 대해 즉각적인 불만을 표출하는
             경우도 생겨요.</span
           >
-          <span class="cause">
-            원인: 어린 시절 목표 설정과 협동, 그리고 이에 대한 인내와 책임을
-            배울 수 있는 환경이 충분히 주어지지 못했을 수 있어요.
-          </span>
+          <div class="cause_wrapper">
+            <div class="cause_title">원인</div>
+            <div class="cause_content">
+              어린 시절 목표 설정과 협동, 그리고 이에 대한 인내와 책임을 배울 수
+              있는 환경이 충분히 주어지지 못했을 수 있어요.
+            </div>
+          </div>
           {#each comments as c}
-            <span>코맨트: {c}</span>
+            <div class="comment_wrapper">
+              <div class="separate_wrapper">
+                <span />
+                <span>#</span>
+                <span />
+              </div>
+              <span class="comment">{c}</span>
+            </div>
           {/each}
         </div>
       </div>
@@ -153,7 +166,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.94rem;
+    gap: 2.5rem;
   }
 
   .result {
@@ -205,17 +218,101 @@
   .other {
     display: flex;
     flex-direction: column;
-    gap: 1.38rem;
-    padding: 0 1rem;
+    gap: 1.88rem;
+    padding: 0 1.25rem;
   }
 
-  .other > span {
+  .total_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .total_word {
+    color: #4a4141;
+    font-family: "THEFACESHOP INKLIPQUID";
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.875rem; /* 136.364% */
+  }
+
+  .total_summary {
+    color: #4a4141;
+    font-family: "Noto-Sans";
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.875rem; /* 136.364% */
+  }
+
+  .disposition {
     color: #4a4141;
     font-family: "Noto-Sans";
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 400;
     line-height: 1.875rem; /* 166.667% */
+  }
+
+  .cause_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .cause_title {
+    display: flex;
+    background-color: #fbbd61;
+    color: #4a4141;
+    font-family: "Noto-Sans";
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 0.35rem 0.875rem;
+    border-radius: 50%;
+  }
+
+  .cause_content {
+    color: #4a4141;
+    font-family: "Noto-Sans";
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.875rem; /* 166.667% */
+  }
+
+  .comment_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.82rem;
+  }
+
+  .comment {
+    color: #4a4141;
+    font-family: "Noto-Sans";
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.875rem; /* 166.667% */
+  }
+
+  .separate_wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2.2rem;
+  }
+
+  .separate_wrapper > span:nth-child(odd) {
+    width: 100%;
+    height: 1px;
+    background-color: black;
   }
 
   .retry_button {
