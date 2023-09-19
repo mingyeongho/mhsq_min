@@ -72,10 +72,6 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    /* min-height: calc(100% - 9rem); */
-    height: 100%;
-    min-height: 100%;
-    max-height: 100%;
   }
   .question {
     width: 100%;
