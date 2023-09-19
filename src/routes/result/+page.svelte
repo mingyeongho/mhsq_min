@@ -27,7 +27,7 @@
     const { Kakao } = window;
 
     Kakao.Share.sendScrap({
-      requestUrl: $page.url.href,
+      requestUrl: `${$page.url.host}/share_result`,
     });
   };
 
