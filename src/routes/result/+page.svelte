@@ -5,16 +5,11 @@
   import Header from "../../component/Survey/Header.svelte";
   import BottomDiscription from "../../component/bottom_discription/bottom_discription.svelte";
   import { answer } from "../store/answer_data";
-  import type { AnswerType } from "../survey/type";
   import { calculate } from "./schema_calculate";
   import { createComment } from "./schema_comment";
 
-  let selectedAnswers: AnswerType[] = $answer;
-  const aa = [
-    5, 5, 5, 5, 6, 3, 4, 5, 5, 5, 5, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
-    5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,
-  ];
-  const aaa = calculate(aa);
+  let selectedAnswers: number[] = $answer.map((a) => a.score);
+  const aaa = calculate(selectedAnswers);
   const comments = createComment(aaa);
 
   // const bb = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]

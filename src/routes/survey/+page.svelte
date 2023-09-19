@@ -41,7 +41,7 @@
       <div class="question">
         <span>검사가 완료되었습니다.</span>
         <div class="flex">
-          <button class="selectButton"> 결과 확인하기 </button>
+          <button class="selectButton">결과 확인하기 </button>
         </div>
       </div>
     {/if}

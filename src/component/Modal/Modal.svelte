@@ -37,21 +37,4 @@
     height: 16rem;
     overflow: auto;
   }
-
-  @media screen and (max-width: 1200px) {
-    .wrapper {
-      height: 90vh;
-    }
-  }
-  @media screen and (max-width: 768px) {
-    .container {
-      padding: 0.25rem;
-    }
-    .wrapper {
-      height: 90vh;
-      padding: 1.5rem;
-    }
-  }
-  @media screen and (max-width: 576px) {
-  }
 </style>
