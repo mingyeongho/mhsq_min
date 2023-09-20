@@ -93,4 +93,8 @@
     line-height: normal;
     transition: background-color 0.3s;
   }
+
+  button:hover {
+    background-color: #fbbd61;
+  }
 </style>
