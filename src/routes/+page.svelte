@@ -14,7 +14,7 @@
     <section class="bb">
       <img {src} alt="landing" />
       <div class="group">
-        <a href="/survey" class="start-button">시작하기</a>
+        <a href="/survey" class="start-button" id="start-button">시작하기</a>
         <BottomDiscription />
         <a href="https://www.maumlab.co.kr/" class="company" target="_blank"
           >마음연구소는?</a
