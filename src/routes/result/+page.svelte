@@ -82,7 +82,7 @@
               있는 환경이 충분히 주어지지 못했을 수 있어요.
             </div>
           </div>
-          {#each comments as c}
+          <!-- {#each comments as c}
             <div class="comment_wrapper">
               <div class="separate_wrapper">
                 <span />
@@ -91,13 +91,15 @@
               </div>
               <span class="comment">{c}</span>
             </div>
-          {/each}
+          {/each} -->
         </div>
       </div>
       <div class="retry_button">
         <button on:click={onRetry}>다시 해보기</button>
       </div>
-      <BottomDiscription />
+      <div class="origin">
+        <BottomDiscription />
+      </div>
     </div>
   </main>
 </section>
@@ -332,6 +334,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .origin {
+    width: 90%;
+    max-width: 20rem;
   }
 
   .bottom {
