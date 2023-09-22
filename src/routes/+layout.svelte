@@ -1,17 +1,14 @@
-<div class="container">
+<div>
   <slot />
 </div>
 
 <style scoped>
-  .container {
+  div {
     width: 100%;
     max-width: 576px;
     height: 100%;
-    min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    /* justify-content: center; */
-    overflow: hidden;
   }
 </style>

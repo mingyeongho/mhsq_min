@@ -1,4 +1,7 @@
 {
     "editor.defaultFormatter": "vscode.typescript-language-features",
-    "eslint.format.enable": true
+    "eslint.format.enable": true,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
