@@ -18,7 +18,6 @@
     width: 100%;
     height: 100%;
     background-color: var(--accent-color);
-    /* padding: 4.5rem 1.88rem 2.5rem; */
     padding: 4.5rem 0 2.5rem;
     display: flex;
     justify-content: center;

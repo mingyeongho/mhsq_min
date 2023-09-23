@@ -1,5 +1,5 @@
 <script lang="ts">
-  type TextType = "origin" | "foundation" | "title";
+  type TextType = "origin" | "foundation" | "title" | "header" | "progress";
 
   export let label: string = "";
   export let type: TextType = "origin";
@@ -34,5 +34,19 @@
     line-height: normal;
     color: var(--text-color);
     text-align: center;
+  }
+
+  .header {
+    font-family: "GangwonEduAll";
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: var(--white-color);
+  }
+
+  .progress {
+    font-family: "GangwonEduAll";
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: var(--text-color);
   }
 </style>

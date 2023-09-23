@@ -1,5 +1,6 @@
 import type { QuestionType } from './type';
 
+
 export const questions: QuestionType = [
     {
         index: 1,

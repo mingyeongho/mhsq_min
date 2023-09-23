@@ -2,8 +2,8 @@
 <script lang="ts">
   import { goto } from "$app/navigation";
   import { page } from "$app/stores";
+  import type { StepType } from "$lib/type";
   import Transition from "../Transition/Transition.svelte";
-  import type { StepType } from "../../routes/survey/type";
 
   export let qs: string = "funnel-step"; // 쿼리스트링 default: funnel-step
   export let steps: StepType[] = [];

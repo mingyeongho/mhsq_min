@@ -1,5 +1,5 @@
 import { writable } from 'svelte/store';
-import type { AnswerType } from '../survey/type';
+import type { AnswerType } from '../type';
 import { browser } from '$app/environment';
 
 const sessionAnswerList = (): AnswerType[] => {

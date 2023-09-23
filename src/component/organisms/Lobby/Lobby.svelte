@@ -1,7 +1,12 @@
 <script>
+  import { goto } from "$app/navigation";
   import Button from "../../atoms/Button/Button.svelte";
   import Link from "../../atoms/Link/Link.svelte";
   import Text from "../../atoms/Text/Text.svelte";
+
+  const onStart = () => {
+    goto("/survey");
+  };
 </script>
 
 <div class="container">
@@ -14,7 +19,7 @@
   </div>
   <div class="bot">
     <div class="start_button">
-      <Button label="시작하기" type="primary" />
+      <Button label="시작하기" type="primary" onClick={onStart} />
     </div>
     <Link label="마음연구소는?" href="https://www.maumlab.co.kr/" />
   </div>
