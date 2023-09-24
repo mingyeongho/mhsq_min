@@ -34,9 +34,9 @@
       duration: $disabled ? 0 : 400,
       css: (t: number, u: number) =>
         `position: absolute;
-        transform: translateX(${-offset * u}px);
-        left:0; z-index: -1;
-        `,
+          transform: translateX(${-offset * u}px);
+          left:0; z-index: -1;
+          `,
     };
   }
 </script>

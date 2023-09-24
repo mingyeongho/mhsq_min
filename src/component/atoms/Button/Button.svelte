@@ -27,4 +27,21 @@
     font-size: 1.25rem;
     font-weight: 700;
   }
+
+  .secondary {
+    border: 1px solid var(--accent-color);
+    background-color: var(--white-color);
+    color: var(--text-color);
+    font-family: "Noto Sans";
+    font-size: 1.0625rem;
+    font-weight: 500;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: var(--accent-color);
+      color: var(--white-color);
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+  }
 </style>

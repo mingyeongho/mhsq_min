@@ -1,5 +1,12 @@
 <script lang="ts">
-  type TextType = "origin" | "foundation" | "title" | "header" | "progress";
+  type TextType =
+    | "origin"
+    | "foundation"
+    | "title"
+    | "header"
+    | "progress"
+    | "question"
+    | "questionIndex";
 
   export let label: string = "";
   export let type: TextType = "origin";
@@ -48,5 +55,20 @@
     font-size: 1.125rem;
     font-weight: 400;
     color: var(--text-color);
+  }
+
+  .question {
+    font-family: "GangwonEduAll";
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: var(--text-color);
+    text-align: center;
+  }
+
+  .questionIndex {
+    font-family: "GangwonEduAll";
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: var(--accent-color);
   }
 </style>
