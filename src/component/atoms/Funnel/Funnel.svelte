@@ -2,6 +2,7 @@
   import { goto } from "$app/navigation";
   import { page } from "$app/stores";
   import type { StepType } from "$lib/type";
+  import Transition from "../Transition/Transition.svelte";
 
   export let qs: string = "funnel-step"; // 쿼리스트링 default: funnel-step
   export let steps: StepType[] = [];
@@ -27,16 +28,21 @@
 
 <div>
   {#key 보여줄_퍼널.name}
-    <svelte:component
-      this={보여줄_퍼널.component}
-      {...보여줄_퍼널.props}
-      onNext={() => 다음페이지로_이동({ 보여줄_퍼널_페이지 })}
-    />
+    <Transition>
+      <svelte:component
+        this={보여줄_퍼널.component}
+        {...보여줄_퍼널.props}
+        onNext={() => 다음페이지로_이동({ 보여줄_퍼널_페이지 })}
+      />
+    </Transition>
   {/key}
 </div>
 
 <style scoped>
   div {
     flex: 1;
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
   }
 </style>
