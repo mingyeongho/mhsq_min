@@ -36,8 +36,10 @@
     font-size: 1.0625rem;
     font-weight: 500;
     transition: all 0.3s;
+  }
 
-    &:hover {
+  @media (hover: hover) {
+    .secondary:hover {
       background-color: var(--accent-color);
       color: var(--white-color);
       font-size: 1.25rem;
