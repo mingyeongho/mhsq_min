@@ -24,6 +24,7 @@
   div {
     width: 100%;
     height: 3.125rem;
+    min-height: 3.125rem;
     display: flex;
     justify-content: center;
     align-items: center;

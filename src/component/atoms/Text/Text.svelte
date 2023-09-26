@@ -6,7 +6,9 @@
     | "header"
     | "progress"
     | "question"
-    | "questionIndex";
+    | "questionIndex"
+    | "result_title"
+    | "infomation";
 
   export let label: string = "";
   export let type: TextType = "origin";
@@ -70,5 +72,22 @@
     font-size: 1.75rem;
     font-weight: 400;
     color: var(--accent-color);
+  }
+
+  .result_title {
+    font-family: "GangwonEduAll";
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--text-color);
+    text-align: center;
+  }
+
+  .infomation {
+    color: var(--text-color);
+    font-family: "Noto Sans";
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.875rem; /* 166.667% */
   }
 </style>
