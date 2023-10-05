@@ -1,12 +1,11 @@
 <script lang="ts">
-  import { fly } from "svelte/transition";
   import Modal from "./Modal.svelte";
 
   export let showModal = false;
 </script>
 
 <Modal bind:showModal>
-  <div class="container" transition:fly>
+  <div class="container">
     <span>링크가 복사되었습니다.</span>
     <button on:click={() => (showModal = false)}>확인</button>
   </div>
