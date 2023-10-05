@@ -1,5 +1,22 @@
 <script>
+  import { page } from "$app/stores";
+  import SuccessCopyModal from "../../Modal/SuccessCopyModal.svelte";
   import Text from "../../atoms/Text/Text.svelte";
+
+  let isOpenSuccessCopyModal = false;
+
+  const onShareKakao = () => {
+    const { Kakao } = window;
+
+    Kakao.Share.sendScrap({
+      requestUrl: $page.url.href,
+    });
+  };
+
+  const onShareLink = async () => {
+    await window.navigator.clipboard.writeText($page.url.href);
+    isOpenSuccessCopyModal = true;
+  };
 </script>
 
 <div class="container">
@@ -10,10 +27,10 @@
       <Text label="특권의식/웅대성 유형" type="question" />
     </div>
     <div class="share_wrapper">
-      <button>
+      <button on:click={onShareKakao}>
         <img src="Kakao.svg" alt="Kakao" />
       </button>
-      <button>
+      <button on:click={onShareLink}>
         <img src="Link.svg" alt="Link" />
       </button>
     </div>
@@ -25,6 +42,10 @@
     </div>
   </div>
 </div>
+
+{#if isOpenSuccessCopyModal}
+  <SuccessCopyModal bind:showModal={isOpenSuccessCopyModal} />
+{/if}
 
 <style scoped>
   .container {

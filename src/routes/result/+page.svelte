@@ -1,9 +1,14 @@
 <script>
+  import { goto } from "$app/navigation";
   import Text from "../../component/atoms/Text/Text.svelte";
   import HeaderTitle from "../../component/molecules/HeaderTitle/HeaderTitle.svelte";
   import PostIt from "../../component/molecules/PostIt/PostIt.svelte";
   import Origin from "../../component/organisms/Origin/Origin.svelte";
   import ResultSummary from "../../component/organisms/ResultSummary/ResultSummary.svelte";
+
+  const onRetry = () => {
+    goto("survey");
+  };
 </script>
 
 <div class="container">
@@ -34,7 +39,7 @@
                 type="infomation"
               />
             </div>
-            <button>다시 해보기</button>
+            <button on:click={onRetry}>다시 해보기</button>
           </div>
         </PostIt>
       </div>

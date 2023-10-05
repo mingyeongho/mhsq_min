@@ -26,7 +26,6 @@
     background-color: var(--ivory-color);
     width: 100%;
     padding: 3rem 1.3rem 1.62rem;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.2));
   }
 
   .tape_wrapper {

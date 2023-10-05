@@ -1,11 +1,12 @@
 <script lang="ts">
+  import { fly } from "svelte/transition";
   import Modal from "./Modal.svelte";
 
   export let showModal = false;
 </script>
 
 <Modal bind:showModal>
-  <div class="container">
+  <div class="container" transition:fly>
     <span>링크가 복사되었습니다.</span>
     <button on:click={() => (showModal = false)}>확인</button>
   </div>
@@ -27,7 +28,7 @@
     align-items: center;
     color: #4a4141;
     font-family: NanumGothic;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 400;
     line-height: 1.875rem; /* 150% */
@@ -36,12 +37,12 @@
   button {
     width: 100%;
     border-radius: 1.875rem;
-    background-color: #fbbd61;
+    background-color: var(--accent-color);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     border: none;
     padding: 0.9rem;
-    color: #4a4141;
+    color: var(--white-color);
     text-align: center;
     font-family: Nanum Gothic;
     font-size: 1.125rem;
