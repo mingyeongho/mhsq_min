@@ -27,10 +27,10 @@
       <Text label="특권의식/웅대성 유형" type="question" />
     </div>
     <div class="share_wrapper">
-      <button on:click={onShareKakao} id="share_kakao">
+      <button on:click={onShareKakao} id="shareKakao">
         <img src="Kakao.svg" alt="Kakao" />
       </button>
-      <button on:click={onShareLink} id="share_link">
+      <button on:click={onShareLink} id="shareLink">
         <img src="Link.svg" alt="Link" />
       </button>
     </div>
