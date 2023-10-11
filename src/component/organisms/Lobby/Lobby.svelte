@@ -19,9 +19,13 @@
   </div>
   <div class="bot">
     <div class="start_button">
-      <Button label="시작하기" type="primary" onClick={onStart} />
+      <Button label="시작하기" type="primary" onClick={onStart} id="start" />
     </div>
-    <Link label="마음연구소는?" href="https://www.maumlab.co.kr/" />
+    <Link
+      label="마음연구소는?"
+      href="https://www.maumlab.co.kr/"
+      id="maumlab"
+    />
   </div>
 </div>
 

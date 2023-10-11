@@ -4,9 +4,10 @@
   export let label: string = "";
   export let onClick = () => {};
   export let type: ButtonType = "primary";
+  export let id = "";
 </script>
 
-<button class={type} on:click={onClick}>
+<button class={type} on:click={onClick} {id}>
   {label}
 </button>
 

@@ -39,7 +39,7 @@
                 type="infomation"
               />
             </div>
-            <button on:click={onRetry}>다시 해보기</button>
+            <button on:click={onRetry} id="retry">다시 해보기</button>
           </div>
         </PostIt>
       </div>
