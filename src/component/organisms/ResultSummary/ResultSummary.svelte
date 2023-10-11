@@ -9,12 +9,12 @@
     const { Kakao } = window;
 
     Kakao.Share.sendScrap({
-      requestUrl: $page.url.href,
+      requestUrl: `${$page.url.origin}/share`,
     });
   };
 
   const onShareLink = async () => {
-    await window.navigator.clipboard.writeText($page.url.href);
+    await window.navigator.clipboard.writeText(`${$page.url.origin}/share`);
     isOpenSuccessCopyModal = true;
   };
 </script>

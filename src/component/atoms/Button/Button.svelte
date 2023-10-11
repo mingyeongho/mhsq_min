@@ -1,5 +1,9 @@
 <script lang="ts">
-  type ButtonType = "primary" | "secondary";
+  type ButtonType =
+    | "primary"
+    | "secondary"
+    | "primary_medium"
+    | "secondary_medium";
 
   export let label: string = "";
   export let onClick = () => {};
@@ -39,12 +43,37 @@
     transition: all 0.3s;
   }
 
+  .primary_medium {
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    font-size: 1rem;
+    font-weight: 700;
+    transition: all 0.3s;
+  }
+
+  .secondary_medium {
+    border: 2px solid var(--accent-color);
+    background-color: var(--white-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 700;
+    transition: all 0.3s;
+  }
+
   @media (hover: hover) {
     .secondary:hover {
       background-color: var(--accent-color);
       color: var(--white-color);
       font-size: 1.25rem;
       font-weight: 700;
+    }
+
+    .primary_medium:hover {
+      font-size: 1.125rem;
+    }
+
+    .secondary_medium:hover {
+      font-size: 1.125rem;
     }
   }
 </style>

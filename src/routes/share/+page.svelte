@@ -1,8 +1,17 @@
 <script lang="ts">
+  import { goto } from "$app/navigation";
   import Button from "../../component/atoms/Button/Button.svelte";
   import Text from "../../component/atoms/Text/Text.svelte";
   import HeaderTitle from "../../component/molecules/HeaderTitle/HeaderTitle.svelte";
   import PostIt from "../../component/molecules/PostIt/PostIt.svelte";
+
+  const onGoTest = () => {
+    goto("/");
+  };
+
+  const onGoResult = () => {
+    goto("/result");
+  };
 </script>
 
 <div class="container">
@@ -21,11 +30,21 @@
             type="infomation"
           />
           <div class="buttons_wrapper">
-            <Button label="" />
+            <Button
+              label="테스트하기"
+              type="secondary_medium"
+              onClick={onGoTest}
+            />
+            <Button
+              label="결과보기"
+              type="primary_medium"
+              onClick={onGoResult}
+            />
           </div>
         </div>
       </PostIt>
     </div>
+    <Text type="origin" label="마음연구소" />
   </div>
 </div>
 
@@ -43,7 +62,9 @@
     width: 100%;
     background-color: var(--accent-color);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
     padding: 4.2rem 0 2.2rem;
   }
 
@@ -70,6 +91,15 @@
   .title_wrapper {
     display: flex;
     flex-direction: column;
+    gap: 0.62rem;
+  }
+
+  .buttons_wrapper {
+    width: 100%;
+    height: 3.125rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
     gap: 0.62rem;
   }
 </style>
