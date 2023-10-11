@@ -3,6 +3,7 @@
   import Text from "../../atoms/Text/Text.svelte";
 
   export let isPrevButton: boolean = true;
+  export let title = "마음연구소";
 
   const onPrev = () => {
     if (browser) {
@@ -17,7 +18,7 @@
       <img src="ArrowLeft.svg" alt="ArrowLeft" />
     {/if}
   </button>
-  <Text label="마음연구소" type="header" />
+  <Text label={title} type="header" />
 </div>
 
 <style scoped>
